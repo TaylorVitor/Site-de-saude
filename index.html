@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="bg">
+
+        <header class="header">
+            <div class="logo">
+                <a href="#"></a>
+            </div>
+
+            <nav class="links">
+                <ul class="menu">
+
+                    <li><a href="#">Covid</a></li>
+                    
+                    <li><a href="#">Sobre qually</a></li>
+
+                    <li><a href="#">Diretoria</a></li>
+
+                    <li><a href="#">Mapa</a></li>
+
+                    <li><a href="#">Biblioteca</a>
+                        <ul class="submenu">
+                            <li><a href="#">Trabalhos</a></li>
+                            <li><a href="#">Cursos</a></li>
+                            <li><a href="#">Membros</a></li>
+                            <li><a href="#">serviços</a></li>
+                            <li><a href="#">cuidados</a></li>
+                            <li><a href="#">Login</a></li>
+                        </ul>
+                    </li>
+        
+                    <li><a href="#">links-rápidos</a>
+                        <ul class="submenu">
+                            <li><a href="#">Ongs</a></li>
+                            <li><a href="#">informações</a></li>
+                            <li><a href="#">Agendamento</a></li>
+                            <li><a href="#">loja</a></li>
+                            <li><a href="#">sair</a></li>
+                            <li><a href="#">opções</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <section class="search">
+                        <input type="search" class="input" placeholder="Pesquise">
+                        <button class="btn">
+                            <i class='bx bx-search-alt-2'></i>
+                        </button>
+                    </section>
+                </ul>
+            </nav>
+        </header>
+
+        <!-------- Menu hamburguer --------->
+
+        <div class="abrirFechar" onclick="abrirFecharMenu()">
+            <i class='bx bx-menu'></i>
+        </div>
+
+        <div class="Inscrever-se">
+            <form>
+
+                
+                <h2>Inscreva-se</h2>
+                
+
+                <p>
+                    <label>Nome completo</label>
+                    <br>
+                    <input type="text" placeholder="Nome completo">
+                </p>
+
+
+                <p>
+                    <label>Email</label>
+                    <br>
+                    <input type="email" placeholder="Email">
+                </p>
+
+                <p>
+                    <label>Em qual perfil você se encaixa</label>
+                    <select> 
+                    <option>Selecione</option>
+                    <option>Estudante</option>
+                    <option>Estuda e trabalha</option>
+                    <option>Não estudo</option>
+                    <option>Não trabalho</option>
+                </select>
+                </p>
+
+                <p>
+                    <button class="btn-inscrito" type="reset">Inscrever-se</button>
+                </p>
+                
+            </form>            
+        </div>
+        
+        <div class="concluido">Obrigado por se inscrever</div>
+
+        <!-------- PG PRINCIPAL --------->
+
+        <section class="content">
+                
+                <h1 class="texto1" data-text="Sua saúde é mais importante"></h1>
+        
+                <p data-text="Cuide da sua saúde e tenha mais qualidade de vida e disposição para encarar o dia a dia"></p>
+        
+                <div class="botao-meio">
+                    <a href="#" class="botao">Nosso trabalho</a>
+                </div>
+
+
+        </section>
+
+        <div class="linha-verde"></div>
+
+        
+
+        <!-------- EQUIPE --------->
+        
+        <section class="equipe">
+
+            <div class="foto-equipe"></div>
+
+                <div class="caixa-apresentacao">
+                                
+                    <H1 class="quem-somos">Quem somos</H1>
+                    
+                    <h1 class="textos-apresentacao">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae porro nesciunt a doloribus molestiae omnis, error, provident sint mollitia sed placeat consequatur rerum temporibus unde.</h1>
+
+                    <div class="botao-leia-mais">
+                        <a href="#" class="leia-mais" >Leia mais</a>
+                    </div>
+
+                </div>
+
+
+        </section>
+
+        <!-------- lista de tratamentos --------->
+
+
+        <section class="caixa_tratamentos">
+
+            <div class="box_tratamentos">
+                <h1>Confira alguns dos tratamentos realizados</h1>
+                <div class="os_tratamentos">
+                    <ul>
+                        <li>Tratamento pós-Covid-19</li>
+                        <li>Fisioterapia em grupo</li>
+                        <li>Fisioterapia cardiorrespiratória</li>
+                        <li>Orientação ergonômica</li>
+                    </ul>
+                    <ul>
+                        <li>Reeducação Postural Global</li>
+                        <li>Fisioterapia ortopédica</li>
+                        <li>Tratamento postural</li>
+                        <li>Pilates</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-------- Psicologia --------->
+
+
+        <section class="psicologia">
+            <img src="./img/psicologia.png" alt="psicologia">
+            <div class="psicologia2">
+                <h1>Psicologia</h1>
+                <h3>Mente sã, corpo são</h3>
+
+                <p id="texto-psi">
+                    Você sabia que a terapia é necessária para o aumento da qualidade de vida e promoção da saúde mental de todo mundo?
+                <span> Por isso, oferecemos acompanhamento psicológico para que você possa aprofundar o seu autoconhecimento e ter uma vida mais leve e plena.
+                </span>
+                </p>
+            </div>
+
+        <!-------- Psicologia e tratamento --------->
+
+
+            <section class="tratamentos-psico">
+                <h1 class="text-psico-lista">Confira os tratamentos</h1>
+                <nav class="tratamentos-lista">
+                    <ul>
+                        <li>Terapia individual e de casal, familiar e em grupo</li>
+                        <li>Dependência química</li>
+                        <li>Depressão</li>
+                        <li>Ansiedade</li>
+                        <li>Orientação vocacional</li>
+                    </ul>
+                </nav>
+            </section>
+            
+
+        </section>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-------- Odontologia --------->
+
+        <section class="odontologia">
+            <div class="sobre-odonto">
+                <div class="odonto">
+                    <h1 class="titu-odonto">odontologia</h1>
+                    <h3 class="titu-odonto2">Saúde bucal vai além do sorriso e traz benefícios para todo o corpo</h3>
+
+                    <p class="text-odonto">
+                        Os nossos dentistas estão prontos para atender você. Do que você precisa? Seja uma consulta odontológica preventiva e de rotina, seja um tratamento mais complexo, conte com a gente.
+                        
+                        <br>
+                        <br>
+
+                        Marque uma primeira consulta para manter a saúde da sua boca em dia.
+                    </p>
+                </div>
+
+                <div class="odonto-photo">
+                    <img src="./img/odontologia.png" alt="odontologia">
+                </div>
+            </div>
+
+        <!-------- Odontologia e tratamentos--------->
+            
+
+            <section class="tratamento-odonto">
+                <h1 class="titulo-tratamento-lista">
+                    Confira alguns dos tratamentos realizados
+                </h1>
+
+                <nav class="lista-odonto">
+                    <ul>
+                        <li>Restaurações</li>
+                        <li>Aplicação de flúor</li>
+                        <li>Remoção de tártaro e limpeza</li>
+                        <li>Próteses</li>
+                        <li>Extrações dentárias</li>
+                        <li>Tratamento endodôntico (canal)</li>
+                        <li>Tratamento ortodôntico (aparelho)</li>
+                    </ul>
+                </nav>
+            </section>
+
+        </section>
+
+        <br><br>
+        <br><br>
+
+
+        <!-------- tipos de especialidades --------->
+
+        <section id="especialidades">
+            <h2>Conheça mais de nossas especialidades</h2>
+            <div class="tipos-box">
+                <div class="tipos"><img src="./img/especialistas/fisioterapia.png" width="250px" alt=""></div>
+                <div class="tipos"><img src="./img/especialistas/nutricao.png" width="250px" alt=""></div>
+                <div class="tipos"><img src="./img/especialistas/odontologia.png" width="250px" alt=""></div>
+                <div class="tipos"><img src="./img/especialistas/psicologia.png" width="250px" alt=""></div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="porcento">0%</div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

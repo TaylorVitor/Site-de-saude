@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/*--------- Blur --------*/
+
+#bg {
+    filter: blur(0px);
+}
+
+.porcento {
+    font-size: 30px;
+    position: absolute;
+    top: 47%;
+    left: 49%;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 2px black;
+}
+
+/*--------- menu e submenu --------*/
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(90deg, rgb(0, 136, 248), rgb(0, 119, 255));
+    box-shadow: 0 0 4px black ;
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+.menu {
+    display: flex;
+}
+
+
+.menu > li {
+    padding: 12px 20px;
+    transition: 500ms;
+    position: relative;
+}
+
+.menu  li:hover {
+    background-image: linear-gradient(90deg, rgb(0, 84, 211), rgb(0, 73, 231));
+}
+
+.menu > li:hover > .submenu{
+    display: block;
+}
+
+.menu > li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    display: block;
+}
+
+/*--------- Menu hamburguer --------*/
+
+.abrirFechar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 3px 20px;
+    background-image: linear-gradient(90deg, rgb(0, 136, 248), rgb(0, 81, 255));
+    cursor: pointer;
+}
+
+.abrirFechar:hover {
+    background-image: linear-gradient(90deg, rgb(0, 68, 255), rgb(0, 110, 255));
+}
+
+.abrirFechar i {
+    font-size: 40px;
+    color: white;
+}
+
+.Inscrever-se {
+    position: absolute;
+    right: -100%;
+    width: 15%;
+    height: 23rem;
+    background-image: linear-gradient(90deg, rgb(0, 68, 255), rgb(0, 110, 255));
+    color: white;
+    display: block;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    transition: all 800ms ease;
+    box-shadow: -3px 3px 7px rgb(0, 38, 207);
+}
+
+.Inscrever-se h2 {
+    position: relative;
+    margin: 10px 0 -10px 0;
+}
+
+
+.Inscrever-se p {
+    margin: 20px;
+}
+
+.Inscrever-se input {
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.btn-inscrito {
+    padding: 5px 15px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.btn-inscrito:active {
+    background-color: rgb(0, 255, 0);
+}
+
+.concluido {
+    position: absolute;
+    right: -30%;
+    top: 11%;
+    width: 15%;
+    height: 3rem;
+    background-image: linear-gradient(90deg, rgb(24, 206, 0), rgb(36, 214, 0));
+    transition: all 800ms ease;
+    text-align: center;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    text-shadow: 0 0 2px rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.concluido.visivel {
+    right: 0%;
+}
+
+.Inscrever-se.aberto {
+    right: 0;
+}
+
+
+
+/*--------- SubMenu --------*/
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    min-width: 90%;
+    background-image: linear-gradient(90deg, rgb(0, 136, 248), rgb(0, 81, 255));
+}
+
+.submenu  li {
+    padding: 10px 18px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.submenu > li > a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px black;
+    font-weight: bolder;
+}
+
+.submenu li .submenu {
+    top: 0;
+    left: 100%;
+}
+
+.search {
+    position: relative;
+    height: 50px;
+}
+
+.input {
+    padding: 10px;
+    background-image: linear-gradient(90deg, rgb(248, 248, 248), rgb(255, 255, 255));
+    border: 0;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s ease;
+}
+
+.input::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+/*--------- PG botão --------*/
+
+
+.btn {
+    background-image: linear-gradient(90deg, rgb(0, 87, 248), rgb(0, 132, 255));
+    color: white;
+    border: 0;
+    font-size: 20px;
+    width: 50px;
+    cursor: pointer;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.btn:focus, .input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .btn {
+    transform: translateX(158px);
+}
+
+
+/*--------- PG principal --------*/
+
+.content {
+    text-align: center;
+    background-image: url(./img/capa.png);
+    background-color: rgb(55, 0, 253);
+    width: 100%;
+    height: 620px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.texto1 {
+    font-size: 67px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    word-spacing: px;
+}
+
+.texto1::before {
+    content: attr(data-text);
+
+    position: absolute;
+    top: 2%;
+    left: 0;
+    width: 50%;
+    animation: h1pg 15s steps(25);
+    letter-spacing: -4px;
+}
+
+@keyframes h1pg {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 50%;
+    }
+}
+
+
+.content p {
+    width: 47%;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "poppings", Helvetica, sans-serif;
+    margin-left: 20px;
+}
+
+.content p::before {
+    content: attr(data-text);
+
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 8%;
+    animation: paraGraf 15s steps(25);
+}
+
+@keyframes paraGraf {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 50%;
+    }
+}
+
+
+.botao-meio {
+    position: absolute;
+    top: 13%;
+    left: 16%;
+}
+
+.botao {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px 40px;
+    background-image: linear-gradient(90deg, rgb(0, 136, 248), rgb(0, 81, 255));
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffff;
+}
+
+.botao:hover {
+    background-image: linear-gradient(90deg, rgb(0, 99, 248), rgb(0, 66, 209));
+}
+
+.botao:hover:active {
+    padding: 9px 38px;
+}
+
+
+.linha-verde {
+    background-image: linear-gradient(90deg, rgb(0, 99, 248), rgb(0, 66, 209));
+    width: 100%;
+    height: 40px;
+}
+
+
+/*---------------------- EQUIPE -------------------------*/
+
+.equipe {
+    margin-top: 100px;
+    display: flex;
+}
+
+.foto-equipe {
+    background-image: url(./img/equipe.jpg);
+    background-repeat: no-repeat;
+    background-size: 350px;
+    width: 30%;
+    height: 500px;
+    border:  2px solid black;
+    border-radius: 20px;
+    margin: 0 40px 30px 60px;
+
+}
+
+.caixa-apresentacao {
+    margin-right: 60px;   
+}
+
+.quem-somos {
+    font-size: 60px;
+    text-align: center;
+}
+
+.textos-apresentacao {
+    margin-top: 40px;
+    font-weight: 200;
+    font-size: 20px;
+    width: 800px;
+    text-align: center;
+}
+
+.botao-leia-mais {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.leia-mais {
+    background-image: linear-gradient(90deg, rgb(0, 136, 248), rgb(0, 81, 255));
+    padding: 10px 90px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffff;
+}
+
+.leia-mais:hover {
+    background-image: linear-gradient(90deg, rgb(0, 114, 207), rgba(0, 73, 231, 0.76));
+}
+
+
+/*--------- caixa-tratamentos --------*/
+
+.caixa_tratamentos {
+    width: 100%;
+    position: relative;
+    right: 50%;
+    left: 20%;
+    margin-top: 100px;
+}
+
+.box_tratamentos{
+    width: 800px;
+    border: 1px solid black;
+    padding: 20px 60px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+}
+
+.box_tratamentos h1 {
+    font-size: 20px;
+}
+
+.os_tratamentos {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    list-style: circle;
+    width: 900px;
+}
+
+.os_tratamentos ul{
+    list-style: circle;
+    margin-right: 120px;
+}
+
+/*---------------------- psicologia -------------------------*/
+
+.psicologia {
+    display: flex;
+}
+
+.psicologia2 {
+    position: relative;
+    height: 20%;
+    width: 50%;
+    margin-top: 50px;    
+}
+
+.psicologia2 h1{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.psicologia2 h3{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#texto-psi {
+    color: black;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 28%;
+    width: 50%;
+    font-weight: 400;
+}
+
+span {
+    position: relative;
+    margin-top: 20px;
+    display: block;
+}
+
+/*---------------------- psicologia-lista-tratamentos -------------------------*/
+
+.tratamentos-psico {
+    width: 30%;
+    position: absolute;
+    margin: 35% 0 0 62%;
+    padding: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.text-psico-lista {
+    text-align: center;
+}
+
+.tratamentos-lista ul {
+    list-style-type: circle;
+    margin-top: 20px;
+}
+
+
+/*---------------------- Odontologia -------------------------*/
+
+.odontologia {
+    width: 100%;
+}
+
+.sobre-odonto {
+    display: flex;
+}
+
+.odonto {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 15%;
+    margin-right: 20%;
+}
+
+.titu-odonto{
+    font-size: 30px;
+    text-align: center;
+}
+
+.titu-odonto2 {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.text-odonto {
+    margin-top: 15%;
+    text-align: center;
+    width: 110%;
+    color: black;
+    text-align: left;
+    font-weight: 400;
+    margin-left: -10px;
+}
+
+.odonto-photo {
+    width: 100%;
+}
+
+/*---------------------- Odontologia-tratamentos -------------------------*/
+
+.tratamento-odonto {
+    width: 30%;
+    height: 60%;
+    margin: -7% 0 0 14%;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.titulo-tratamento-lista{
+    font-size: 20px;
+}
+
+.lista-odonto {
+    margin-top: 10%;
+}
+
+.lista-odonto ul {
+    list-style: circle;
+}
+
+
+
+/*---------------------- especialidades -------------------------*/
+
+#especialidades {
+    width: 100%;
+    height: 25rem;
+}
+
+.tipos-box {
+    display: flex;
+    justify-content: center;
+}
+
+.tipos-box .tipos {
+    width: 70px;
+    margin: 20px 17% 0 0 ;
+    cursor: pointer;
+
+}
+
+#especialidades h2 {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
